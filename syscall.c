@@ -11,4 +11,5 @@ int main()
 	for (i=0; i < 5000000; i++) {
 		agg += getpid();
 	}
+	return 0;
 }

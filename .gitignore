@@ -1,2 +1,16 @@
 *.o
-
+arr_block
+arr_page
+arr_standard
+cpu
+file_io
+file_io_no_sleep
+io
+io_tracking
+ll_block
+ll_page
+ll_standard
+set_running_core_to_time
+syscall
+t1
+test_read
