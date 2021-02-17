@@ -25,7 +25,7 @@ void iterate_once(long *arr)
 void iterate_arr_a_bunch(long *arr)
 {
 	int i;
-	for (i = 0; i < 10000; i++) {
+	for (i = 0; i < 2500; i++) {
 		iterate_once(arr);
 	}
 }
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 {
 	printf("starting\n");
 	fflush(stdout);
-	long arr[100000*64];//arr of length 100,000
+	long* arr = malloc(sizeof(long)*100000*64);//arr of length 100,000
 	fill_arr(arr);
 	iterate_arr_a_bunch(arr);
 	printf("done\n");

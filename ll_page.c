@@ -40,7 +40,7 @@ void iterate_once(struct node *head)
 void iterate_list_a_bunch(struct node *head)
 {
 	int i;
-	for (i = 0; i < 10000; i++) {
+	for (i = 0; i < 300; i++) {
 		iterate_once(head);
 	}
 }

@@ -25,7 +25,7 @@ void iterate_once(long *arr)
 void iterate_arr_a_bunch(long *arr)
 {
 	int i;
-	for (i = 0; i < 10000; i++) {
+	for (i = 0; i < 1000; i++) {
 		iterate_once(arr);
 	}
 }

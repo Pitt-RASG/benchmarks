@@ -7,7 +7,8 @@ int main()
 	pid_t pid = getpid();
 	printf("cpu pid: %d\n", pid);
 	int agg = 0;
-	while (1) {
+	int i;
+	for (i=0; i < 5000000; i++) {
 		agg += getpid();
 	}
 }

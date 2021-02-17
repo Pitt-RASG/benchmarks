@@ -8,7 +8,7 @@ void fill_arr(long *arr)
 {
 	int i;
 	for (i = 0; i < 100000; i++) {//list size of 100,000
-		arr[i] = i;
+		//arr[i] = i;
 	}
 }
 
@@ -16,7 +16,7 @@ void iterate_once(long *arr)
 {
 	long agg = 0;
 	int i;
-	for (i = 0; i < 100000; i++) {
+	for (i = 0; i < 1000; i++) {
 		agg += arr[i*4096];
 		ops++;
 	}
@@ -25,7 +25,7 @@ void iterate_once(long *arr)
 void iterate_arr_a_bunch(long *arr)
 {
 	int i;
-	for (i = 0; i < 10000; i++) {
+	for (i = 0; i < 30000; i++) {
 		iterate_once(arr);
 	}
 }
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 {
 	printf("starting\n");
 	fflush(stdout);
-	long arr[100000*4096];//arr of length 100,000
+	long* arr = (long*) malloc(sizeof(long)*1000*4096);
 	fill_arr(arr);
 	iterate_arr_a_bunch(arr);
 	printf("done\n");

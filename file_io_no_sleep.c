@@ -11,7 +11,8 @@ int main(int argc, char *argv[])
 
 	char c;
 
-	while (1) {
+	int i;
+	for (i=0; i < 80000; i++) {
 		FILE *fp = fopen("io_file.txt", "r");
 		if (!fp) {
 			printf("couldn't find/open io_file.txt\n");
